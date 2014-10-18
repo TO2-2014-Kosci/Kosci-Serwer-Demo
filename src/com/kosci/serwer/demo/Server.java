@@ -6,17 +6,14 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.LinkedList;
 
-/**
- * Created by Fan on 2014-10-18.
- */
 public class Server {
     private static final String QUEUE_NAME = "dice_demo_queue";
     private Connection connection;
     private Channel channel;
 
-    private List<IController> controllers;
+    private LinkedList<IController> controllers = new LinkedList<>();
 
     public Server() throws  IOException, InterruptedException {
         ConnectionFactory factory = new ConnectionFactory();
