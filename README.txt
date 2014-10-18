@@ -1,0 +1,1 @@
+Demo technologiczne komponentu Serwer projektu "Gra w kości" realizowanego w ramach zajęć Technologii Obiektowych 2.
