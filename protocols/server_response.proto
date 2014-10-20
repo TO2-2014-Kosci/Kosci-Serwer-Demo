@@ -1,0 +1,11 @@
+option java_package = "to2.kosci.protocols";
+
+message Response {
+    enum Status {
+        SUCCESS = 0;
+        FAILURE = 1;
+    }
+
+    required Status status = 1;
+    optional string reason = 2;
+}

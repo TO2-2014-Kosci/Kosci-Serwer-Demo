@@ -1,4 +1,4 @@
-package com.kosci.serwer.demo;
+package to2.kosci.serwer.demo;
 
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;

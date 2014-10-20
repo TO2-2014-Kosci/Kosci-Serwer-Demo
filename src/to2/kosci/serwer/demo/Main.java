@@ -1,4 +1,4 @@
-package com.kosci.serwer.demo;
+package to2.kosci.serwer.demo;
 
 public class Main {
 
