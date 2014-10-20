@@ -1,0 +1,10 @@
+option java_package = "to2.kosci.protocols";
+
+message LoginRequest {
+    required string login = 1;
+}
+
+message GameRequest {
+    required string login = 1;
+    required string message = 2;
+}

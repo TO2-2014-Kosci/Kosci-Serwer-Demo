@@ -1,9 +1,10 @@
-package com.kosci.serwer.demo;
+package to2.kosci.serwer.demo;
 
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
+import to2.kosci.protocols.ClientRequest;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -21,6 +22,7 @@ public class Server {
         connection = factory.newConnection();
         channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare("kosci_public_response", false, false, false, null);
     }
 
     public void run() throws IOException, InterruptedException {
@@ -31,9 +33,12 @@ public class Server {
 
         while (true) {
             QueueingConsumer.Delivery delivery = consumer.nextDelivery();
-            String message = new String(delivery.getBody());
+            ClientRequest.LoginRequest request = ClientRequest.LoginRequest.parseFrom(delivery.getBody());
+            String login = request.getLogin();
+            System.out.format(" [*] Received login request from %s%n", login);
+
             for (IController controller : controllers) {
-                System.out.println(controller.respondTo(message));
+                channel.basicPublish("", "kosci_public_response", null, controller.respondTo(login).toByteArray());
             }
         }
     }

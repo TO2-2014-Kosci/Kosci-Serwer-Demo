@@ -1,4 +1,6 @@
-package com.kosci.serwer.demo;
+package to2.kosci.serwer.demo;
+
+import java.util.Random;
 
 public class Main {
 
@@ -12,7 +14,8 @@ public class Main {
                     break;
                 case "c":
                     Client client = new Client("localhost", "dice_demo_queue");
-                    client.sendHello();
+                    client.login("Fan" + (new Random()).nextInt(32));
+                    client.closeConnection();
             }
         }
         catch (Exception e) {
