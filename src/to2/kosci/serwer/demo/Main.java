@@ -1,5 +1,7 @@
 package to2.kosci.serwer.demo;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +14,8 @@ public class Main {
                     break;
                 case "c":
                     Client client = new Client("localhost", "dice_demo_queue");
-                    client.sendHello();
+                    client.login("Ean" + ('0' + (new Random()).nextInt(32)));
+                    client.closeConnection();
             }
         }
         catch (Exception e) {

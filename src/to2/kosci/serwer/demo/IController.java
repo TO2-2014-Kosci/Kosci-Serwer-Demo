@@ -1,5 +1,7 @@
 package to2.kosci.serwer.demo;
 
+import to2.kosci.protocols.ServerResponse;
+
 public interface IController {
-    public String respondTo(String message);
+    public ServerResponse.Response respondTo(String message);
 }
