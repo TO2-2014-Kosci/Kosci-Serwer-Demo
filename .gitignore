@@ -14,5 +14,8 @@
 hs_err_pid*
 
 # IntelliJ files
-.idea
 libs
+.idea/
+*.iml
+*.iws
+kosci-serwer-demo.properties
