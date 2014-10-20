@@ -14,7 +14,7 @@ public class Main {
                     break;
                 case "c":
                     Client client = new Client("localhost", "dice_demo_queue");
-                    client.login("Ean" + ('0' + (new Random()).nextInt(32)));
+                    client.login("Fan" + (new Random()).nextInt(32));
                     client.closeConnection();
             }
         }

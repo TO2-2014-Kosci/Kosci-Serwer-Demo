@@ -15,8 +15,4 @@ hs_err_pid*
 
 # IntelliJ files
 .idea
-Kosci-Serwer-Demo.iml
 libs
-module_kosci-serwer-demo.xml
-kosci-serwer-demo.properties
-kosci-serwer-demo.xml
