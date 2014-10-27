@@ -13,7 +13,7 @@ public class Main {
                     Server server = new Server();
                     server.addController(new IGUIController() {
                     });
-                    server.run();
+                    //server.run();
                     break;
                 case "p":
                     Player player = new Player();

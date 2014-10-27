@@ -4,7 +4,7 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
-import to2.kosci.protocols.server;
+import to2.kosci.protocols.Server;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -15,5 +15,5 @@ public class Server {
     private LinkedList<Player> players = new LinkedList<>();
     private LinkedList<Room> rooms = new LinkedList<>();
 
-    Response handleRequest(Request Request);
+    Server.Response handleRequest(Server.Request Request);
 }
