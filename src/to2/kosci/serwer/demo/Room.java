@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import to2.kosci.protocols.Server;
+import to2.kosci.protocols.ServerProtocols;
 
 /**
  * Created by Janusz on 2014-10-27.
@@ -18,7 +18,7 @@ public class Room implements IGameController {
 
     }
     @Override
-    public void handleGameRequest (Server.Request request){
+    public void handleGameRequest (ServerProtocols.Request request){
 
     }
 

@@ -11,8 +11,7 @@ public class Main {
             switch (args[0]) {
                 case "s":
                     Server server = new Server();
-                    server.addController(new IGUIController() {
-                    });
+                    server.addController(null);
                     //server.run();
                     break;
                 case "p":
