@@ -17,8 +17,8 @@ message Request {
     required RequestType type = 1;
     required string login = 2;
 
-    optional RoomRequest room_request = 1;
-    optional GameActionRequest game_action_request = 2;
+    optional RoomRequest room_request = 3;
+    optional GameActionRequest game_action_request = 4;
 }
 
 message RoomRequest {
@@ -42,7 +42,7 @@ message Response {
     required Status status = 1;
     optional string reason = 2;
 
-    optional RoomReponse room_response = 1;
+    optional RoomReponse room_response = 10;
 }
 
 
