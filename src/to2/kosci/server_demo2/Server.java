@@ -15,5 +15,5 @@ public class Server {
     private LinkedList<Player> players = new LinkedList<>();
     private LinkedList<Room> rooms = new LinkedList<>();
 
-    Response handleRequest(Request);
+    Response handleRequest(Request Request);
 }

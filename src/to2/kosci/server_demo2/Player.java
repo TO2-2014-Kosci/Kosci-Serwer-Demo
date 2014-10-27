@@ -9,7 +9,7 @@ public class Player {
     public Room room;
     private IGUIController controller;
 
-    void sendMessage (Message) {}
+    void sendMessage (Message Message) {}
     Response sitDown();
     Response standUp();
 }
