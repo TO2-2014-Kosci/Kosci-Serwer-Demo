@@ -55,12 +55,4 @@ public class Client {
         channel = connection.createChannel();
         channel.queueDeclare(queueName, false, false, false, null);
     }
-
-    private String toJson(JsonObject object) {
-        StringWriter json = new StringWriter();
-        JsonWriter jw = Json.createWriter(json);
-        jw.writeObject(object);
-        jw.close();
-        return json.toString();
-    }
 }
