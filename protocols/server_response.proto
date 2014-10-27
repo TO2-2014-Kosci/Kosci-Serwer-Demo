@@ -8,4 +8,5 @@ message Response {
 
     required Status status = 1;
     optional string reason = 2;
+    optional string test = 3;
 }
