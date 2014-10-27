@@ -1,12 +1,6 @@
 package to2.kosci.serwer.demo;
 
 
-import to2.kosci.protocols.ServerResponse;
-
-import javax.json.Json;
-import javax.json.JsonReader;
-import java.io.StringReader;
-
 public class StandardController implements IController {
     @Override
     public ServerResponse.Response respondTo(String login) {

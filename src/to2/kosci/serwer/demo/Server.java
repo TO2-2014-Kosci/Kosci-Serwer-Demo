@@ -4,7 +4,6 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
-import to2.kosci.protocols.ClientRequest;
 
 import java.io.IOException;
 import java.util.LinkedList;
