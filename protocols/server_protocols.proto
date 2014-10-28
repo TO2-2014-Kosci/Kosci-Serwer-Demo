@@ -37,17 +37,19 @@ message Response {
         FAILURE = 1;
 
         ROOM_RESPONSE = 10;
+        GAME_RESPONSE = 20;
     }
 
     required Status status = 1;
     optional string reason = 2;
 
-    optional RoomReponse room_response = 10;
+    optional RoomResponse room_response = 10;
+    optional GameResponse game_response = 20;
 }
 
 
 // Room messages
-message RoomReponse {
+message RoomResponse {
     enum Type {
         ROOM_LIST = 0;
         ROOM_STATE = 1;
@@ -78,4 +80,8 @@ message RoomState {
 
     repeated PlayerInfo players = 2;
     repeated string bot_levels = 3;
+}
+
+message GameResponse {
+    // defined elsewhere
 }
