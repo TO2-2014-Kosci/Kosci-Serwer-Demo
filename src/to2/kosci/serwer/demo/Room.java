@@ -40,7 +40,7 @@ public class Room implements IGameController {
     }
 
     boolean hasUser (Player player){
-        for (Player p : players) if (p.login==player.login) return true;
+        for (Player p : players) if (p.login.equals(player.login)) return true;
         return false;
     }
 }
