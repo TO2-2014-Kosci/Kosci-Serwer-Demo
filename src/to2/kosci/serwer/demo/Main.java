@@ -13,6 +13,7 @@ public class Main {
                     ServerProtocols.Request request_test =
                             ServerProtocols.Request.newBuilder()
                                     .setLogin("fanfilmu")
+                                    .setType(ServerProtocols.Request.RequestType.LOGIN)
                                     .build();
 
                     Server server = new Server();
