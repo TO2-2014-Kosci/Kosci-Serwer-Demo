@@ -16,8 +16,21 @@ public class Server {
     private LinkedList<Player> players = new LinkedList<>();
     private LinkedList<Room> rooms = new LinkedList<>();
 
-    public ServerProtocols.Response handleRequest(ServerProtocols.Request Request) {
-        throw new NotImplementedException();
+    public ServerProtocols.Response handleRequest(ServerProtocols.Request request) {
+        Player fanfilmu = new Player(request.getLogin(), null , null, null);
+        players.add(fanfilmu);
+
+        Room room_test = new Room();
+        rooms.add(room_test);
+
+        room_test.addPlayer(fanfilmu);
+
+        for (Player p : players){
+            if (room_test.hasUser(p)) {
+                System.out.println("Players in room_test: ");
+            }
+        }
+        throw new NotImplementedException(); //hyhy hyhy hyhy
     }
 
     public void addController(IGUIController controller) {

@@ -45,7 +45,6 @@ message Response {
     optional RoomReponse room_response = 10;
 }
 
-
 // Room messages
 message RoomReponse {
     enum Type {

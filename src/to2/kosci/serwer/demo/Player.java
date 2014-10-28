@@ -10,6 +10,13 @@ public class Player {
     public Room room;
     private IGUIController controller;
 
+    public Player(String login, String state, Room room, IGUIController controller){
+        this.login = login;
+        this.state = state;
+        this.room = room;
+        this.controller = controller;
+    }
+
     void sendMessage (ServerProtocols.Response Message) {}
     //Response sitDown();
     //Response standUp();

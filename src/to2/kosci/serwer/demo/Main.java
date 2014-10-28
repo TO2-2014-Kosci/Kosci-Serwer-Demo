@@ -10,12 +10,18 @@ public class Main {
         try {
             switch (args[0]) {
                 case "s":
+                    ServerProtocols.Request request_test =
+                            ServerProtocols.Request.newBuilder()
+                                    .setLogin("fanfilmu")
+                                    .build();
+
                     Server server = new Server();
+                    server.handleRequest(request_test);
                     server.addController(null);
                     //server.run();
                     break;
                 case "p":
-                    Player player = new Player();
+                    Player player = new Player(null, null, null, null);
                     player.login = ("Ean" + (new Random()).nextInt(32));
                     player.state = "My state is...";
             }
